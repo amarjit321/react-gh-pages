@@ -1,10 +1,13 @@
-name: amarjit
+name: amarjit  # This is the workflow name shown in GitHub Actions tab
+
 on:
   push:
-    branches:[ main ]
+    branches: [main]  # space after colon is important
+
 jobs:
   demo:
     runs-on: ubuntu-latest
+
     steps:
       - name: greetings
         run: echo "hello world"
