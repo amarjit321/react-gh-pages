@@ -1,8 +1,25 @@
-name: amarjit  # This is the workflow name shown in GitHub Actions tab
+# name: amarjit  # This is the workflow name shown in GitHub Actions tab
+
+# on:
+#   push:
+#     branches: [main]  # space after colon is important
+
+# jobs:
+#   demo:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: greetings
+#         run: echo "hello world"
+
+name: amarjit
 
 on:
   push:
-    branches: [main]  # space after colon is important
+    branches: [main]
+
+  schedule:
+    - cron: '0 16 * * *'  # Runs daily at 03:00 UTC
 
 jobs:
   demo:
